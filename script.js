@@ -1,17 +1,26 @@
-const gridContainer = document.querySelector('.gridContainer');
+const gridSize = 600;
 
-function createGrid(gridSize){
-    for(let i = 0; i < gridSize; i++){
-        const gridColumn = gridContainer.appendChild(document.createElement('div'));
-        for(let j = 0; j < gridSize; j++){
-            const gridSquare = document.createElement('div');
-            gridSquare.className = 'gridSquare';
-            gridColumn.appendChild(gridSquare)
-            gridSquare.addEventListener('mouseover', () => {
-                gridSquare.style.backgroundColor = 'grey';
-            });
-        }
+let rows = 16;
+let cols = 16;
+
+const container = document.querySelector('.container');
+container.style.width = `${gridSize}px`;
+container.style.height = `${gridSize}px`;
+
+function createGridCells() {
+    for (let i = 0; i < (rows * cols); i++) {
+        const gridCell = document.createElement('div');
+
+        gridCell.style.width = `${(gridSize / cols) - 2}px`;
+        gridCell.style.height = `${(gridSize / rows) - 2}px`;
+        gridCell.classList.add('cell');
+
+        container.appendChild(gridCell);
+
+        gridCell.addEventListener('mouseover', () => {
+            gridCell.style.backgroundColor = 'darkgrey';
+        });
     }
 }
 
-createGrid(32);
+createGridCells();

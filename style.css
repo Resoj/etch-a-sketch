@@ -1,31 +1,18 @@
-.header {
-    display: flex;
-    justify-content: center;
-    font-size: xx-large;
-    border: 1px solid red;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-.gridSection {
+body {
+    background-color: oldlace;
+}
+.container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid red;
+    flex-wrap: wrap;
+    background-color:  lightgray;
+    margin: 100px auto;
 }
 
-.gridContainer {
-    display: flex;
-    border: 1px solid red;
-    width: fit-content;
-}
-/* 
-.gridColumn {
-
-} */
-
-.gridSquare {
-    background-color: whitesmoke;
-    border: 1px solid lightgrey;
-    height: 10px;
-    width: 10px;
-    flex: 1 0 calc(20% - 20px);
+.cell {
+    border: 1px solid darkgray;
 }
