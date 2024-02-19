@@ -2,8 +2,8 @@ const gridSize = 600;
 
 let gridDimensions = 16;
 
-const container = document.querySelector('.container');
-container.style.width = container.style.height = `${gridSize}px`;
+const gridContainer = document.querySelector('.grid-container');
+gridContainer.style.width = gridContainer.style.height = `${gridSize}px`;
 
 function createGridCells() {
     const numOfGridCells = (gridDimensions * gridDimensions);
@@ -13,7 +13,7 @@ function createGridCells() {
         gridCell.style.width = gridCell.style.height = `${(gridSize / gridDimensions) - 2}px`;
         gridCell.classList.add('cell');
 
-        container.appendChild(gridCell);
+        gridContainer.appendChild(gridCell);
 
         gridCell.addEventListener('mouseover', () => {
             gridCell.style.backgroundColor = 'darkgrey';

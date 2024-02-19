@@ -6,7 +6,7 @@
 body {
     background-color: oldlace;
 }
-.container {
+.grid-container {
     display: flex;
     flex-wrap: wrap;
     background-color:  lightgray;
