@@ -24,7 +24,7 @@ h1 {
 
 .buttons {
     display: flex;
-    gap: 390px;
+    gap: 310px;
     margin-top: 25px;
 }
 .grid-container {
@@ -35,5 +35,5 @@ h1 {
 }
 
 .cell {
-    border: 1px solid darkgray;
+    border: 1px solid oldlace;
 }
