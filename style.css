@@ -6,11 +6,28 @@
 body {
     background-color: oldlace;
 }
+
+button {
+    text-align: center;
+    padding: 5px 10px;
+    font-size: large;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+}
 .grid-container {
     display: flex;
     flex-wrap: wrap;
     background-color:  lightgray;
-    margin: 100px auto;
+    margin: 25px auto;
 }
 
 .cell {

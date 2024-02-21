@@ -21,4 +21,10 @@ function createGridCells() {
     }
 }
 
+function removeGridCells() {
+    while (gridContainer.firstChild) {
+        gridContainer.removeChild(gridContainer.firstChild);
+    }
+}
+
 createGridCells();
