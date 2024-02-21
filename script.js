@@ -10,7 +10,7 @@ function createGridCells() {
     for (let i = 0; i < numOfGridCells; i++) {
         const gridCell = document.createElement('div');
 
-        gridCell.style.width = gridCell.style.height = `${Math.round(gridSize / gridDimensions) - 2}px`;
+        gridCell.style.width = gridCell.style.height = `${gridSize / gridDimensions - 2}px`;
         gridCell.classList.add('cell');
 
         gridContainer.appendChild(gridCell);
@@ -44,6 +44,11 @@ const sizeButton = document.querySelector('.size-button');
 
 sizeButton.addEventListener('click', () => {
     let userInput = prompt("Enter a number between 16 and 100 as the size of your new grid dimension:")
+    
+    if(userInput === null){
+        return;
+    }
+    
     if (userInput >= 16 && userInput <= 100){
         gridDimensions = userInput;
         changeGridDimensions(gridDimensions);
