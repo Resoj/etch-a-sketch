@@ -12,6 +12,9 @@ button {
     padding: 5px 10px;
     font-size: large;
 }
+h1 {
+    font-size: 75px;
+}
 
 .header {
     display: flex;
@@ -19,9 +22,10 @@ button {
     flex-direction: column;
 }
 
-.footer {
+.buttons {
     display: flex;
-    justify-content: center;
+    gap: 390px;
+    margin-top: 25px;
 }
 .grid-container {
     display: flex;
